@@ -19,7 +19,7 @@ with `sudo`.
 Add this to your configuration file:
 
 ```elisp
-(setq enable-rufo-on-save t)
+(setq rufo-enable-format-on-save t)
 ```
 
 ## Key-binding
