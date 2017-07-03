@@ -24,7 +24,7 @@
   (when (rufo-is-ruby-file?)
     (progn
       (shell-command (format "rufo %s" buffer-file-name))
-      (revert-buffer nil t))))
+      (revert-buffer nil t t))))
 
 (defun rufo-installed? ()
   "Verify that the binary rufo is present in the system's path."
