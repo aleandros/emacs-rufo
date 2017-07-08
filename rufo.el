@@ -35,10 +35,10 @@
   "Check if the current buffer is in a known ruby mode."
   (member major-mode '(ruby-mode enh-ruby-mode)))
 
-(defun rufo--enable-format-after-save-hook ()
-  "If enabled, add the ‘after-save-hook’."
+(defun rufo--enable-format-before-save-hook ()
+  "If enabled, add the ‘before-save-hook’."
   (when rufo-enable-format-on-save
-    (add-hook 'after-save-hook #'rufo-format-buffer t)))
+    (add-hook 'before-save-hook #'rufo-format-buffer t)))
 
 (defun rufo--run-external-command ()
   "Handle execution of external command."
@@ -74,8 +74,8 @@
 (add-hook 'enh-ruby-mode-hook
           (lambda ()
             (define-key enh-ruby-mode-map (kbd "C-c f") 'rufo-format-buffer)))
-(add-hook 'ruby-mode-hook #'rufo--enable-format-after-save-hook)
-(add-hook 'enh-ruby-mode-hook #'rufo--enable-format-after-save-hook)
+(add-hook 'ruby-mode-hook #'rufo--enable-format-before-save-hook)
+(add-hook 'enh-ruby-mode-hook #'rufo--enable-format-before-save-hook)
 
 (provide 'rufo)
 
