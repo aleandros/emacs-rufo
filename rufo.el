@@ -3,7 +3,7 @@
 ;; Copyright (C) 2017 Edgar Cabrear
 
 ;; Author: Edgar Cabrera <edgar@cafeinacode.com>
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; Keywords: tools
 ;; URL: https://github.com/aleandros/emacs-rufo
 
